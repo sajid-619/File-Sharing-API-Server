@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "f579b771-5b47-4476-aad5-18c64e4f9109",
+		"name": "File sharing server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST/files",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "upload",
+							"type": "file",
+							"src": "/Users/User/Downloads/node logo.png"
+						},
+						{
+							"key": "urlExpiryTime",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/files",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/files/c64756bcc34b07",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"files",
+						"c64756bcc34b07"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/files",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/files/044242cbc164fcda",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"files",
+						"044242cbc164fcda"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
